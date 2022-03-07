@@ -34,6 +34,11 @@ pipeline {
 
   }
   
-
+  post {
+    
+    success {
+      junit 'target/surefire-reports/**/*.xml'
+    }
+  }
 
 }
